@@ -12,14 +12,14 @@ do
 
     # get WGS84 (EPSG:4326)
     curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json&SRSName=urn:x-ogc:def:crs:EPSG:4326" > "wgs84/${REGION}.json"
-    mapshaper "wgs84/$REGION.json" -simplify 10% -o "wgs84/$REGION.geojson"
-    mapshaper "wgs84/$REGION.json" -simplify 10% -o "wgs84/$REGION.topojson"
+    mapshaper "wgs84/$REGION.json" -simplify 10% -o "wgs84/$REGION.geojson" id-field=statcode
+    mapshaper "wgs84/$REGION.json" -simplify 10% -o "wgs84/$REGION.topojson" id-field=statcode
 
     # get rijkdriehoeksstelsel (EPSG:28894)
     # get WGS84 (EPSG:4326)
     curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json" > "rd/${REGION}.json"
-    mapshaper "rd/$REGION.json" -simplify 10% -o "rd/$REGION.geojson"
-    mapshaper "rd/$REGION.json" -simplify 10% -o "rd/$REGION.topojson"
+    mapshaper "rd/$REGION.json" -simplify 10% -o "rd/$REGION.geojson" id-field=statcode
+    mapshaper "rd/$REGION.json" -simplify 10% -o "rd/$REGION.topojson" id-field=statcode
   done
 done
 
