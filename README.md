@@ -26,6 +26,6 @@ Gebruik hiervoor een url die op de volgend wijze is opgebouwd:
 ```
 https://edwindj.github.io/nl_maps/<projectie>/<regio>_<jaar>.<formaat>
 ```
-Bijvoorbeeld de gemeentekaart van 2016 in rijksdriehoekstelformaat is:
+Bijvoorbeeld de _gemeente_ kaart van _2016_ met _rijksdriehoekstel_ projectie in _topojson_ formaat  is:
 
 https://edwindj.github.io/nl_maps/rd/gemeente_2016.topojson
