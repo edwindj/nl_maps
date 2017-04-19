@@ -1,9 +1,9 @@
 mkdir -p rd
 mkdir -p wgs84
 
-REGIONNAME="gemeente"
+#REGIONNAME="gemeente"
 
-for REGIONNAME in "gemeente" "coropgebied" "provincie"
+for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt"
 do
   for YEAR in {2003..2016}
   do 
