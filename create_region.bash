@@ -5,7 +5,7 @@ REGIONNAME="gemeente"
 
 for REGIONNAME in "gemeente" "coropgebied" "provincie"
 do
-  for YEAR in {2003..2016}
+  for YEAR in {2017..2019}
   do 
     REGION="${REGIONNAME}_${YEAR}"
     #echo $REGION
